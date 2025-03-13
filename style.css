@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover; /* Adjusted for responsiveness */
+  background-image: url("./pics/bg/anuBg1.png");
+  background-position: center center;
+  /* background-repeat: no-repeat;
+  margin: 0;
+  padding: 0; */
+}
+
+/* Paper Styles */
+.paper {
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-size: contain;
+  background-position: center center;
+  padding: 20px 5%;
+  max-width: 90%;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  text-align: center;
+}
+
+/* Heart Paper */
+.paper.heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* Adjusted for smaller screens */
+  max-width: 80%;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('./images/cake.jpg');
+  cursor: url('./images/newKnife.png'), auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+/* Image Styles */
+.paper.image {
+  padding: 10px;
+}
+
+.paper.image p {
+  font-size: 20px;
+}
+
+img {
+  max-height: 250px;
+  width: 50%;
+  user-select: none;
+}
+
+/* Typography */
+p {
+  font-family: 'Zeyada', cursive;
+  font-size: 3vw; /* Adjusts based on screen size */
+  color: black;
+  opacity: 0.75;
+  text-align: center;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .paper {
+    padding: 10px;
+    transform: rotateZ(-3deg);
+    max-width: 90%;
+  }
+
+  .paper.heart {
+    height: 120px;
+    max-width: 90%;
+  }
+
+  img {
+    width: 70%;
+    max-height: 200px;
+  }
+
+  p {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .paper {
+    padding: 5px;
+    transform: none;
+  }
+
+  .paper.heart {
+    height: 100px;
+  }
+
+  img {
+    width: 90%;
+    max-height: 150px;
+  }
+
+  p {
+    font-size: 6vw;
+  }
+}
